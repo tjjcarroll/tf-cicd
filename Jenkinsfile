@@ -26,7 +26,7 @@ pipeline{
                         #az account show
                         export TF_LOG=TRACE        
                         echo "Initialising Terraform"
-                        #!terraform init -backend-config="access_key=$ARM_ACCESS_KEY
+                        #!terraform init -backend-config="access_key=$ARM_ACCESS_KEY"
                         """ 
                            }
                     }
