@@ -23,10 +23,10 @@ pipeline{
                 ), string(credentialsId: 'access_key', variable: 'ARM_ACCESS_KEY')]) {
                         
                         sh """
-                        az account show
+                        #az account show
                         export TF_LOG=TRACE        
                         echo "Initialising Terraform"
-                        #!terraform init
+                        #!terraform init -backend-config="access_key=$ARM_ACCESS_KEY
                         """ 
                            }
                     }
