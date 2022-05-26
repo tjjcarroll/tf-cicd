@@ -23,7 +23,7 @@ pipeline{
                 ), string(credentialsId: 'access_key', variable: 'ARM_ACCESS_KEY')]) {
                         
                         sh """
-                                
+                        export TF_LOG=TRACE        
                         echo "Initialising Terraform"
                         #!terraform init
                         """ 
